@@ -1,0 +1,14 @@
+<app-user-menu></app-user-menu>
+<div class="user-list">
+    <h1>User List</h1>
+    <ul>
+      <li *ngFor="let user of users">
+        <div class="user-card">
+          <h2>{{ user.name }}</h2>
+          <p>Address: {{ user.address }}</p>
+          <p>City: {{ user.city }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

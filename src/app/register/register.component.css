@@ -1,0 +1,67 @@
+.register-container {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 140px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+span.hello {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 10px;
+  transition: background 0.3s;
+}
+
+button.navigate {
+  background: #28a745; /* Change the background color for the "Navigate" button */
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+button.navigate:hover {
+  background: #218838; /* Change the background color on hover for the "Navigate" button */
+}

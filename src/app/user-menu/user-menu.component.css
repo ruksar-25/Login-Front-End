@@ -1,0 +1,47 @@
+.user-menu {
+    position: fixed;  /* Use fixed positioning to keep it in place */
+    top: 20px;        /* Adjust the top position as needed */
+    right: 50px;      /* Adjust the right position as needed */
+    font-family: Arial, sans-serif;
+  }
+  
+  .circle {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: fixed;
+    top: 70px;
+    right: 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: block;
+  }
+
+  .dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+  }
+  
+  .dropdown button {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
