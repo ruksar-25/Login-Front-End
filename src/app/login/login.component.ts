@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
+
 
 @Component({
   selector: 'app-login',
@@ -12,25 +14,22 @@ export class LoginComponent {
   password!: string;
 
 
-  constructor(private http: HttpClient,private router: Router) {}
-
+  constructor(private http: HttpClient, private router: Router, private authService: AuthService) { }
 
   onSubmit() {
-    // Create an object with the data
     const data = {
       name: this.name,
       password: this.password
     };
-
-    // Make the PUT request to the API
-    this.http.put('http://localhost:8880/login', data).subscribe(
+    this.http.post('http://localhost:8880/login', data).subscribe(
       (response) => {
-        this.router.navigate(['/details'] );
+        const resp = JSON.parse(JSON.stringify(response));
+        this.authService.saveUserData(resp.data);
+        this.router.navigate(['/details']);
       },
       (error) => {
         this.router.navigate(['/register']);
         console.error('Error:', error);
-        // wapas login, register
       }
     );
   }
