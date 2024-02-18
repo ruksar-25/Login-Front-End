@@ -9,13 +9,15 @@ import { LoginComponent } from './login/login.component';
 import { ListUsersComponent } from './list-users/list-users.component';
 import { RegisterComponent } from './register/register.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
+import { DisplayDataComponent } from './display-data/display-data.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ListUsersComponent,
     RegisterComponent,
-    UserMenuComponent
+    UserMenuComponent,
+    DisplayDataComponent
   ],
   imports: [
     BrowserModule,

@@ -7,6 +7,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'display-data', component: DisplayDataComponent },
   { path: 'register', component: RegisterComponent },

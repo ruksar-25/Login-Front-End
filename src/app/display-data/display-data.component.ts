@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-display-data',
@@ -9,10 +11,16 @@ import { ActivatedRoute } from '@angular/router';
 export class DisplayDataComponent {
   data: any;
 
-  constructor(private route: ActivatedRoute) {
-    const responseParam = this.route.snapshot.queryParamMap.get('response');
-    if(responseParam!=null){
-      this.data = JSON.parse(responseParam);
+  constructor(private http: HttpClient, private router: Router, private route: ActivatedRoute, private authService: AuthService) {
+    const token = this.authService.getToken();
+    if (token) {
+      let userId = this.authService.getUserId();
+      let httpHeaders = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token }) };
+      this.http.get('http://localhost:8880/users/' + userId, httpHeaders).subscribe((data: any) => {
+        this.data = data.data;
+      });
+    } else {
+      this.router.navigate(['/login']);
     }
   }
 }
