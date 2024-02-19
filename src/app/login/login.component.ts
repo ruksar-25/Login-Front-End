@@ -25,7 +25,7 @@ export class LoginComponent {
       (response) => {
         const resp = JSON.parse(JSON.stringify(response));
         this.authService.saveUserData(resp.data);
-        this.router.navigate(['/details']);
+        this.router.navigate(['/home']);
       },
       (error) => {
         this.router.navigate(['/register']);

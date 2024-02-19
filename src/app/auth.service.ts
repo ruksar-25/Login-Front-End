@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class AuthService {
 
   constructor() { }
-
+  
   saveUserData(userData: any) {
     sessionStorage.setItem('userData', JSON.stringify(userData));
   }

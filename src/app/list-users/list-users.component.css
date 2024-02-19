@@ -1,7 +1,9 @@
 .user-list {
     width: 80%;
-    margin: 0 auto;
+    margin-top: 60px;
+    margin:  auto;
     text-align: center;
+    margin-bottom: 150px;
   }
   
   .user-card {
