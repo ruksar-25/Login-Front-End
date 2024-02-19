@@ -1,12 +1,12 @@
 <div class="user-menu">
-    <button class="circle" (click)="toggleDropdown()">
-      {{ userInitial }}
-    </button>
-    <div class="dropdown" *ngIf="isDropdownOpen">
-      <ul>
-        <li><button (click)="register()">Register</button></li>
-        <li><button (click)="viewDetails()">My Details</button></li>
-        <li><button (click)="signOut()">Sign Out</button></li>
-      </ul>
-    </div>
+  <button class="circle" (click)="toggleDropdown()">
+    {{ userInitial }}
+  </button>
+  <div class="dropdown" *ngIf="isDropdownOpen">
+    <ul>
+      <li><button (click)="register()">Register</button></li>
+      <li><button (click)="viewDetails()">My Details</button></li>
+      <li><button (click)="signOut()">Sign Out</button></li>
+    </ul>
   </div>
+</div>

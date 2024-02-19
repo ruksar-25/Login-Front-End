@@ -10,6 +10,7 @@ import { ListUsersComponent } from './list-users/list-users.component';
 import { RegisterComponent } from './register/register.component';
 import { UserMenuComponent } from './user-menu/user-menu.component';
 import { DisplayDataComponent } from './display-data/display-data.component';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { DisplayDataComponent } from './display-data/display-data.component';
     ListUsersComponent,
     RegisterComponent,
     UserMenuComponent,
-    DisplayDataComponent
+    DisplayDataComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

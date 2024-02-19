@@ -11,12 +11,13 @@ import { Router } from '@angular/router';
 export class ListUsersComponent implements OnInit {
   users!: any[];
   constructor(private http: HttpClient, private authService: AuthService, private router: Router) { }
+
   ngOnInit(): void {
     const token = this.authService.getToken();
     if (token != null) {
       let httpHeaders = { headers: new HttpHeaders({ 'Authorization': 'Bearer ' + token }) };
-      this.http.get('http://localhost:8880/users', httpHeaders).subscribe((data: any) => {
-        this.users = data.data;
+      this.http.get('http://localhost:8880/users', httpHeaders).subscribe((response: any) => {
+        this.users = response.data;
       });
     } else {
       this.router.navigate(['/login']);

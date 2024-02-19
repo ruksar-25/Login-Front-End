@@ -1,6 +1,6 @@
 .user-menu {
     position: fixed;  /* Use fixed positioning to keep it in place */
-    top: 20px;        /* Adjust the top position as needed */
+    top: 30px;        /* Adjust the top position as needed */
     right: 50px;      /* Adjust the right position as needed */
     font-family: Arial, sans-serif;
   }
@@ -8,7 +8,7 @@
   .circle {
     width: 40px;
     height: 40px;
-    background-color: #3498db;
+    background-color: #db349e;
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -21,7 +21,7 @@
     position: fixed;
     top: 70px;
     right: 30px;
-    background-color: #fff;
+    background-color: #e4e4e4;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     display: block;
